@@ -1,6 +1,6 @@
 import { GraphQLNonNull, GraphQLID } from "graphql";
 
-import commentType from "../../types/comment";
+import { commentType } from "../../types/comment";
 import { CommentModel } from "../../../models/comment";
 
 export default {

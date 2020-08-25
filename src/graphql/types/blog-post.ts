@@ -1,6 +1,7 @@
-import { GraphQLObjectType, GraphQLNonNull, GraphQLString, GraphQLID } from "graphql";
+import { GraphQLObjectType, GraphQLNonNull, GraphQLString, GraphQLID, GraphQLList } from "graphql";
+import { comments } from "../queries/comment/mutiple";
 
-export default new GraphQLObjectType({
+export const blogPostType = new GraphQLObjectType({
     name: "BlogPost",
     fields: {
         _id: {
@@ -12,5 +13,6 @@ export default new GraphQLObjectType({
         description: {
             type: GraphQLString,
         },
-    },
+        comments: comments
+    }
 });

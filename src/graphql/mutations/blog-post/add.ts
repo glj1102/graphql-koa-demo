@@ -1,7 +1,7 @@
 import { GraphQLNonNull, GraphQLBoolean } from "graphql";
 
 import blogPostInputType from "../../types/blog-post-input";
-import blogPostType from "../../types/blog-post";
+import { blogPostType } from "../../types/blog-post";
 import { BlogPostModel } from "../../../models/blog-post";
 
 export default {
@@ -10,7 +10,7 @@ export default {
         data: {
             name: "data",
             type: new GraphQLNonNull(blogPostInputType),
-        }
+        },
     },
     async resolve(root, params, options) {
         const blogPostModel = new BlogPostModel(params.data);
@@ -19,5 +19,5 @@ export default {
             throw new Error("Error adding new blog post");
         }
         return newBlogPost;
-    }
+    },
 };

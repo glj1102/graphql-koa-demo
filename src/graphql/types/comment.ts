@@ -1,6 +1,6 @@
 import { GraphQLObjectType, GraphQLNonNull, GraphQLString, GraphQLID } from "graphql";
 
-export default new GraphQLObjectType({
+export const commentType = new GraphQLObjectType({
     name: "Comment",
     fields: {
         _id: {

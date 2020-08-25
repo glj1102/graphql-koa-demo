@@ -1,9 +1,9 @@
 import { GraphQLID, GraphQLNonNull } from "graphql";
 
-import commentType from "../../types/comment";
+import { commentType } from "../../types/comment";
 import { CommentModel } from "../../../models/comment";
 
-export default {
+export const comment = {
     type: commentType,
     args: {
         id: {

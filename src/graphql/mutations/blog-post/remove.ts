@@ -1,6 +1,6 @@
 import { GraphQLNonNull, GraphQLID } from "graphql";
 
-import blogPostType from "../../types/blog-post";
+import { blogPostType } from "../../types/blog-post";
 import { BlogPostModel } from "../../../models/blog-post";
 
 export default {
