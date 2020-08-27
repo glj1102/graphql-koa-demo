@@ -8,11 +8,11 @@ export const blogPostType = new GraphQLObjectType({
             type: new GraphQLNonNull(GraphQLID),
         },
         title: {
-            type: GraphQLString,
+            type: GraphQLString!,
         },
         description: {
             type: GraphQLString,
         },
-        comments: comments
+        // comments: comments
     }
 });
